@@ -1,0 +1,463 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>kubernetes学习记录 | Tech智汇站</title><meta name="author" content="智汇君"><meta name="copyright" content="智汇君"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="kubernetes学习记录"><meta name="application-name" content="kubernetes学习记录"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="kubernetes学习记录"><meta property="og:url" content="http://example.com/2025/01/17/kubernetes学习记录/index.html"><meta property="og:site_name" content="Tech智汇站"><meta property="og:description" content="kubernetes学习记录1腾讯汽车云 [kuboard官网](Kubernetes教程 | Kuboard) kubernetes1234567891011Kubernetes（简称K8s）是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用程序。PodPod是Kubernetes中最"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://example.com/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg"><meta property="article:author" content="智汇君"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://example.com/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg"><meta name="description" content="kubernetes学习记录1腾讯汽车云 [kuboard官网](Kubernetes教程 | Kuboard) kubernetes1234567891011Kubernetes（简称K8s）是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用程序。PodPod是Kubernetes中最"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2025/01/17/kubernetes%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css#fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":270},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 智汇君","link":"链接: ","source":"来源: Tech智汇站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Tech智汇站',
+  title: 'kubernetes学习记录',
+  postAI: '',
+  pageFillDescription: 'kubernetes学习记录, kubernetes, deployment, kubectl, kuboard, heml, pods, kubectl get, 名称空间, kubectl describe, kubectl logs, kubectl exec, Kubernetes Service（服务）, 服务和标签, 命令, kubectl get nodes, kubectl config view, kubectl get svc -n namespace, kubectl get svc xxxx -n namespace -o yaml, kubectl get svc xxxx -n namespace -o wide学习记录腾讯汽车云官网教程简称是一个开源的容器编排平台用于自动化部署扩展和管理容器化应用程序是中最小的部署单元可以包含一个或多个容器这些容器共享网络存储和生命周期内的容器可以相互通信而无需通过网络是一种抽象资源用于定义一组的逻辑集合和访问策略它允许外部流量访问同时隐藏的具体实现细节是一种控制器用于管理的副本数量和更新策略它确保指定数量的副本始终运行并支持滚动更新是集群中的一个工作机器可以是物理机或虚拟机每个上运行着容器运行时如或等组件是由多个组成的集群用于运行容器化应用程序集群由控制平面和工作节点组成译名为部署在中通过发布可以创建应用程序的实例这个实例会被包含在称为的概念中是中最小可管理单元在集群中发布后将指示如何创建和更新应用程序的实例节点将应用程序实例调度到集群中的具体的节点上创建应用程序实例后会持续监控这些实例如果运行实例的节点关机或被删除则将在群集中资源最优的另一个节点上重新创建一个新的实例这提供了一种自我修复机制来解决机器故障或维护问题在容器编排之前的时代各种安装脚本通常用于启动应用程序但是不能够使应用程序从机器故障中恢复通过创建应用程序实例并确保它们在集群节点中的运行实例个数提供了一种完全不同的方式来管理应用程序处于节点上通过发布节点会选择合适的节点创建会被包含在里与集群版本有关使用即可查看当前集群支持的版本该配置的类型我们使用的是译名为元数据即的一些基本属性和信息的名称标签可以灵活定位一个或多个资源其中和均可自定义可以定义多组目前不需要理解为该设置为为的标签这是关于该的描述可以理解为你期待该在中如何使用使用该创建一个应用程序实例标签选择器与上面的标签共同作用目前不需要理解选择包含标签的资源这是选择或创建的的模板的元数据的标签上面的即选择包含标签的期望实现的功能即在中部署生成与中的是同一种的名称使用镜像创建该默认端口可访问应用文件查看部署结果查看查看可分别查看到一个名为的和一个名为的任务二达成至此你已经成功在上部署了一个实例的应用程序容器组是一个中一个抽象的概念用于存放一组以及这些容器的一些共享资源这些资源包括共享存储称为卷网络每个容器组在集群中有个唯一的容器组中的容器共享该地址容器的基本信息例如容器的镜像版本对外暴露的端口等例如可能既包含带有应用程序的容器也包含另一个非的容器用于提供要发布的数据中的容器共享地址和端口空间同一中的不同端口不能相互冲突始终位于同一位置并共同调度并在同一节点上的共享上下文中运行同一个内的容器可以使用端口号互相访问容器组是集群上的最基本的单元当我们在上创建时会在集群上创建包含容器的而不是直接创建容器每个都与运行它的节点绑定并保持在那里直到终止或被删除如果节点发生故障则会在群集中的其他可用节点上运行相同的从同样的镜像创建使用同样的配置地址不同名字不同是一组容器可包含一个或多个应用程序容器以及共享存储卷地址和有关如何运行容器的信息如果多个容器紧密耦合并且需要共享磁盘等资源则他们应该被部署在同一个容器组中容器组总是在节点上运行节点是集群中的计算机可以是虚拟机或物理机每个节点都由管理一个节点可以有多个容器组会根据每个节点上可用资源的情况自动调度容器组到最佳的节点上每个节点至少运行负责节点和节点之间通信的进程管理容器组和容器组内运行的容器容器运行环境如负责下载镜像创建和运行容器等节点是中的工作计算机可能是或物理计算机具体取决于群集多个可以在一个节点上运行显示资源列表获取类型为的资源列表获取类型为的资源列表获取类型为的资源列表名称空间在命令后增加或可查看所有名称空间中的对象使用参数可查看指定名称空间的对象例如查看所有名称空间的查看名称空间的并非所有对象都在名称空间里显示有关资源的详细信息资源类型资源名称查看名称为的的信息查看名称为的的信息查看中的容器的打印日志和命令类似名称查看名称为的内的容器打印的日志本案例中的没有输出日志所以您看到的结果是空的在中的容器环境内执行命令和命令类似名称操作命令在名称为的中运行服务事实上容器组有自己的生命周期当节点故障时节点上运行的容器组也会消失然后可以通过创建新的容器组来动态地将群集调整回原来的状态以使应用程序保持运行举个例子假设有一个图像处理后端程序具有个运行时副本这个副本是可以替换的无状态应用即使容器组消失并被重新创建或者副本数由增加到前端系统也无需关注后端副本的变化由于集群中每个容器组都有一个唯一的地址即使是同一个上的不同我们需要一种机制为前端系统屏蔽后端系统的容器组在销毁创建过程中所带来的地址的变化中的服务提供了这样的一个抽象层它选择具备某些特征的容器组并为它们定义一个访问方式服务使容器组之间的相互依赖解耦原本从一个中访问另外一个需要知道对方的地址一个服务选定哪些容器组通常由标签选择器来决定在创建的时候通过设置配置文件中的字段的值可以以不同方式向外部暴露应用程序默认在群集中的内部上公布服务这种方式的服务只在集群内部可以访问到使用在集群中每个的同一端口上公布服务这种方式下可以通过访问集群中任意节点端口号的方式访问服务此时的访问方式仍然可用在云环境中需要云供应商可以支持创建一个集群外部的负载均衡器并为使用该负载均衡器的地址作为服务的访问地址此时和的访问方式仍然可用服务和标签是一个抽象层它通过选择了一组容器组把这些的指定端口公布到到集群外部并支持负载均衡和服务发现公布的端口以使其可访问在多个间实现负载均衡使用和将外部请求路由到一组中它提供了一个抽象层使得可以在不影响服务调用者的情况下动态调度容器组在容器组失效后重新创建容器组增加或者减少同一个对应容器组的数量等使用标签和选择器匹配一组标签是附加到对象的键值对其用途有多种将对象等指派用于开发环境测试环境或生产环境嵌入版本标签使用标签区别不同应用软件版本使用标签对对象进行分类命令检查节点状态检查使用的配置文件默认路径是通过以下命令查看当前使用的配置查看所有执行以下命令查看的具体端口配置查询入口推荐部署时通常会创建一个来对外暴露服务你需要找到这个的访问地址查看所有查看详情找到或可能有几种类型类型访问方式适用场景有公网公网访问集群内仅集群内访问节点端口通过节点访问',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-03-12 22:58:41',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://video-b2g.pages.dev/" title="视频解析"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/视频.png" alt="视频解析"/><span class="back-menu-item-text">视频解析</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://md5-uir.pages.dev/" title="md5值解密"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/MD5.png" alt="md5值解密"/><span class="back-menu-item-text">md5值解密</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://screencheck.pages.dev/#welcome" title="屏幕坏点检查"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/屏幕外观.png" alt="屏幕坏点检查"/><span class="back-menu-item-text">屏幕坏点检查</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://htmleditor-9lo.pages.dev/" title="在线html编辑器"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/html编辑器.png" alt="在线html编辑器"/><span class="back-menu-item-text">在线html编辑器</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">博客</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ttyong-github-io.pages.dev/" title="旧博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/博客.png" alt="旧博客"/><span class="back-menu-item-text">旧博客</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Tech智汇站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Git/" style="font-size: 1.05rem;">Git<sup>1</sup></a><a href="/tags/GitHub/" style="font-size: 1.05rem;">GitHub<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/NodeJs/" style="font-size: 1.05rem;">NodeJs<sup>1</sup></a><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>3</sup></a><a href="/tags/github/" style="font-size: 1.05rem;">github<sup>1</sup></a><a href="/tags/idea/" style="font-size: 1.05rem;">idea<sup>1</sup></a><a href="/tags/%E5%85%AC%E8%80%83%E6%9D%A8%E8%80%81%E5%B8%88/" style="font-size: 1.05rem;">公考杨老师<sup>10</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.05rem;">博客<sup>1</sup></a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 1.05rem;">大数据<sup>31</sup></a><a href="/tags/%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98/" style="font-size: 1.05rem;">安知鱼主题<sup>1</sup></a><a href="/tags/%E5%BB%96%E9%9B%AA%E5%B3%B0/" style="font-size: 1.05rem;">廖雪峰<sup>14</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">笔记<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">计算机网络<sup>1</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 1.05rem;">面试<sup>9</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">101</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/kubernetes/" itemprop="url">kubernetes</a></span></div></div><h1 class="post-title" itemprop="name headline">kubernetes学习记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="post-meta-icon anzhiyufont anzhiyu-icon-calendar-days"></i><span class="post-meta-label">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-01-17T09:35:02.000Z" title="发表于 2025-01-17 17:35:02">2025-01-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为重庆"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>重庆</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2025/01/17/kubernetes%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><header><a class="post-meta-categories" href="/categories/kubernetes/" itemprop="url">kubernetes</a><h1 id="CrawlerTitle" itemprop="name headline">kubernetes学习记录</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">智汇君</span><time itemprop="dateCreated datePublished" datetime="2025-01-17T09:35:02.000Z" title="undefined 2025-01-17 17:35:02">2025-01-17</time></header><h1 id="kubernetes学习记录"><a href="#kubernetes学习记录" class="headerlink" title="kubernetes学习记录"></a>kubernetes学习记录</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">腾讯汽车云</span><br></pre></td></tr></table></figure>
+<p>[kuboard官网](<a target="_blank" rel="noopener" href="https://kuboard.cn/learning/">Kubernetes教程 | Kuboard</a>)</p>
+<h2 id="kubernetes"><a href="#kubernetes" class="headerlink" title="kubernetes"></a>kubernetes</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Kubernetes（简称K8s）是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用程序。</span><br><span class="line">Pod</span><br><span class="line">Pod是Kubernetes中最小的部署单元，可以包含一个或多个容器。这些容器共享网络、存储和生命周期。Pod内的容器可以相互通信，而无需通过网络。</span><br><span class="line">Service</span><br><span class="line">Service是一种抽象资源，用于定义一组Pod的逻辑集合和访问策略。它允许外部流量访问Pod，同时隐藏Pod的具体实现细节。</span><br><span class="line">Deployment</span><br><span class="line">Deployment是一种控制器，用于管理Pod的副本数量和更新策略。它确保指定数量的Pod副本始终运行，并支持滚动更新。</span><br><span class="line">Node</span><br><span class="line">Node是Kubernetes集群中的一个工作机器，可以是物理机或虚拟机。每个Node上运行着kubelet、容器运行时（如Docker或containerd）等组件。</span><br><span class="line">Cluster</span><br><span class="line">Cluster是由多个Node组成的集群，用于运行容器化应用程序。集群由控制平面（Control Plane）和工作节点（Worker Nodes）组成。</span><br></pre></td></tr></table></figure>
+<h3 id="deployment"><a href="#deployment" class="headerlink" title="deployment"></a>deployment</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Deployment 译名为 部署。在k8s中，通过发布 Deployment，可以创建应用程序 (docker image) 的实例 (docker container)，这个实例会被包含在称为 Pod 的概念中，Pod 是 k8s 中最小可管理单元。</span><br><span class="line">在 k8s 集群中发布 Deployment 后，Deployment 将指示 k8s 如何创建和更新应用程序的实例，master 节点将应用程序实例调度到集群中的具体的节点上。</span><br><span class="line">创建应用程序实例后，Kubernetes Deployment Controller 会持续监控这些实例。如果运行实例的 worker 节点关机或被删除，则 Kubernetes Deployment Controller 将在群集中资源最优的另一个 worker 节点上重新创建一个新的实例。这提供了一种自我修复机制来解决机器故障或维护问题。</span><br><span class="line">在容器编排之前的时代，各种安装脚本通常用于启动应用程序，但是不能够使应用程序从机器故障中恢复。通过创建应用程序实例并确保它们在集群节点中的运行实例个数，Kubernetes Deployment 提供了一种完全不同的方式来管理应用程序。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployment处于 master 节点上，通过发布 Deployment，master 节点会选择合适的worker节点创建 Container，Container 会被包含在 Pod里。</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl"><a href="#kubectl" class="headerlink" title="kubectl"></a>kubectl</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># deployment.yaml</span><br><span class="line">apiVersion: apps/v1	#与k8s集群版本有关，使用 kubectl api-versions 即可查看当前集群支持的版本</span><br><span class="line">kind: Deployment	#该配置的类型，我们使用的是 Deployment</span><br><span class="line">metadata:	        #译名为元数据，即 Deployment 的一些基本属性和信息</span><br><span class="line">  name: nginx-deployment	#Deployment 的名称</span><br><span class="line">  labels:	    #标签，可以灵活定位一个或多个资源，其中key和value均可自定义，可以定义多组，目前不需要理解</span><br><span class="line">    app: nginx	#为该Deployment设置key为app，value为nginx的标签</span><br><span class="line">spec:	        #这是关于该Deployment的描述，可以理解为你期待该Deployment在k8s中如何使用</span><br><span class="line">  replicas: 1	#使用该Deployment创建一个应用程序实例</span><br><span class="line">  selector:	    #标签选择器，与上面的标签共同作用，目前不需要理解</span><br><span class="line">    matchLabels: #选择包含标签app:nginx的资源</span><br><span class="line">      app: nginx</span><br><span class="line">  template:	    #这是选择或创建的Pod的模板</span><br><span class="line">    metadata:	#Pod的元数据</span><br><span class="line">      labels:	#Pod的标签，上面的selector即选择包含标签app:nginx的Pod</span><br><span class="line">        app: nginx</span><br><span class="line">    spec:	    #期望Pod实现的功能（即在pod中部署）</span><br><span class="line">      containers:	#生成container，与docker中的container是同一种</span><br><span class="line">      - name: nginx	#container的名称</span><br><span class="line">        image: nginx:1.7.9	#使用镜像nginx:1.7.9创建container，该container默认80端口可访问</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">应用 YAML 文件</span><br><span class="line">kubectl apply -f nginx-deployment.yaml</span><br><span class="line"> </span><br><span class="line">    </span><br><span class="line">查看部署结果</span><br><span class="line"># 查看 Deployment</span><br><span class="line">kubectl get deployments</span><br><span class="line"># 查看 Pod</span><br><span class="line">kubectl get pods</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可分别查看到一个名为 nginx-deployment 的 Deployment 和一个名为 nginx-deployment-xxxxxxx 的 Pod</span><br><span class="line">任务二达成，至此你已经成功在k8s上部署了一个实例的nginx应用程序</span><br></pre></td></tr></table></figure>
+<h4 id="kuboard"><a href="#kuboard" class="headerlink" title="kuboard"></a>kuboard</h4><h4 id="heml"><a href="#heml" class="headerlink" title="heml"></a>heml</h4><h3 id="pods"><a href="#pods" class="headerlink" title="pods"></a>pods</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Pod 容器组 是一个k8s中一个抽象的概念，用于存放一组 container，以及这些 container（容器）的一些共享资源。这些资源包括：</span><br><span class="line">1.共享存储，称为卷(Volumes)</span><br><span class="line">2.网络，每个 Pod（容器组）在集群中有个唯一的 IP，pod（容器组）中的 container（容器）共享该IP地址</span><br><span class="line">3.container（容器）的基本信息，例如容器的镜像版本，对外暴露的端口等</span><br><span class="line">例如，Pod可能既包含带有Node.js应用程序的 container 容器，也包含另一个非 Node.js 的 container 容器，用于提供 Node.js webserver 要发布的数据。Pod中的容器共享 IP 地址和端口空间（同一 Pod 中的不同 container 端口不能相互冲突），始终位于同一位置并共同调度，并在同一节点上的共享上下文中运行。（同一个Pod内的容器可以使用 localhost + 端口号互相访问）。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pod（容器组）是 k8s 集群上的最基本的单元。当我们在 k8s 上创建 Deployment 时，会在集群上创建包含容器的 Pod (而不是直接创建容器)。每个Pod都与运行它的 worker 节点（Node）绑定，并保持在那里直到终止或被删除。如果节点（Node）发生故障，则会在群集中的其他可用节点（Node）上运行相同的 Pod（从同样的镜像创建 Container，使用同样的配置，IP 地址不同，Pod 名字不同）。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Pod 是一组容器（可包含一个或多个应用程序容器），以及共享存储（卷 Volumes）、IP 地址和有关如何运行容器的信息。</span><br><span class="line">如果多个容器紧密耦合并且需要共享磁盘等资源，则他们应该被部署在同一个Pod（容器组）中。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Pod（容器组）总是在 Node（节点） 上运行。Node（节点）是 kubernetes 集群中的计算机，可以是虚拟机或物理机。每个 Node（节点）都由 master 管理。一个 Node（节点）可以有多个Pod（容器组），kubernetes master 会根据每个 Node（节点）上可用资源的情况，自动调度 Pod（容器组）到最佳的 Node（节点）上。</span><br><span class="line">每个 Kubernetes Node（节点）至少运行：</span><br><span class="line">Kubelet，负责 master 节点和 worker 节点之间通信的进程；管理 Pod（容器组）和 Pod（容器组）内运行的 Container（容器）。</span><br><span class="line">容器运行环境（如Docker）负责下载镜像、创建和运行容器等。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Worker节点是k8s中的工作计算机，可能是VM或物理计算机，具体取决于群集。多个Pod可以在一个节点上运行。</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-get"><a href="#kubectl-get" class="headerlink" title="kubectl get"></a>kubectl get</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kubectl get - 显示资源列表</span><br><span class="line">#获取类型为Deployment的资源列表</span><br><span class="line">kubectl get deployments</span><br><span class="line">#获取类型为Pod的资源列表</span><br><span class="line">kubectl get pods</span><br><span class="line">#获取类型为Node的资源列表</span><br><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
+<h4 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在命令后增加 -A 或 --all-namespaces 可查看所有 名称空间中 的对象，使用参数 -n 可查看指定名称空间的对象，例如</span><br><span class="line"># 查看所有名称空间的 Deployment</span><br><span class="line">kubectl get deployments -A</span><br><span class="line">kubectl get deployments --all-namespaces</span><br><span class="line"># 查看 kube-system 名称空间的 Deployment</span><br><span class="line">kubectl get deployments -n kube-system</span><br><span class="line">    </span><br><span class="line">并非所有对象都在名称空间里</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-describe"><a href="#kubectl-describe" class="headerlink" title="kubectl describe"></a>kubectl describe</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> - 显示有关资源的详细信息</span><br><span class="line"># kubectl describe 资源类型 资源名称</span><br><span class="line">#查看名称为nginx-XXXXXX的Pod的信息</span><br><span class="line">kubectl describe pod nginx-XXXXXX	</span><br><span class="line">#查看名称为nginx的Deployment的信息</span><br><span class="line">kubectl describe deployment nginx	</span><br></pre></td></tr></table></figure>
+
+<h4 id="kubectl-logs"><a href="#kubectl-logs" class="headerlink" title="kubectl logs"></a>kubectl logs</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">kubectl logs - 查看pod中的容器的打印日志（和命令docker logs 类似）</span><br><span class="line"># kubectl logs Pod名称</span><br><span class="line">#查看名称为nginx-pod-XXXXXXX的Pod内的容器打印的日志</span><br><span class="line">#本案例中的 nginx-pod 没有输出日志，所以您看到的结果是空的</span><br><span class="line">kubectl logs -f nginx-pod-XXXXXXX</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-exec"><a href="#kubectl-exec" class="headerlink" title="kubectl exec"></a>kubectl exec</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kubectl exec - 在pod中的容器环境内执行命令(和命令docker exec 类似)</span><br><span class="line"># kubectl exec Pod名称 操作命令</span><br><span class="line"># 在名称为nginx-pod-xxxxxx的Pod中运行bash</span><br><span class="line">kubectl exec -it nginx-pod-xxxxxx /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="Kubernetes-Service（服务）"><a href="#Kubernetes-Service（服务）" class="headerlink" title="Kubernetes Service（服务）"></a>Kubernetes Service（服务）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">事实上，Pod（容器组）有自己的 生命周期 (opens new window)。当 worker node（节点）故障时，节点上运行的 Pod（容器组）也会消失。然后，Deployment (opens new window)可以通过创建新的 Pod（容器组）来动态地将群集调整回原来的状态，以使应用程序保持运行。</span><br><span class="line">举个例子，假设有一个图像处理后端程序，具有 3 个运行时副本。这 3 个副本是可以替换的（无状态应用），即使 Pod（容器组）消失并被重新创建，或者副本数由 3 增加到 5，前端系统也无需关注后端副本的变化。由于 Kubernetes 集群中每个 Pod（容器组）都有一个唯一的 IP 地址（即使是同一个 Node 上的不同 Pod），我们需要一种机制，为前端系统屏蔽后端系统的 Pod（容器组）在销毁、创建过程中所带来的 IP 地址的变化。</span><br><span class="line">Kubernetes 中的 Service（服务） 提供了这样的一个抽象层，它选择具备某些特征的 Pod（容器组）并为它们定义一个访问方式。Service（服务）使 Pod（容器组）之间的相互依赖解耦（原本从一个 Pod 中访问另外一个 Pod，需要知道对方的 IP 地址）。一个 Service（服务）选定哪些 Pod（容器组） 通常由 LabelSelector(标签选择器) 来决定。</span><br><span class="line">在创建Service的时候，通过设置配置文件中的 spec.type 字段的值，可以以不同方式向外部暴露应用程序：</span><br><span class="line">ClusterIP（默认）</span><br><span class="line">在群集中的内部IP上公布服务，这种方式的 Service（服务）只在集群内部可以访问到</span><br><span class="line">NodePort</span><br><span class="line">使用 NAT 在集群中每个的同一端口上公布服务。这种方式下，可以通过访问集群中任意节点+端口号的方式访问服务 &lt;NodeIP&gt;:&lt;NodePort&gt;。此时 ClusterIP 的访问方式仍然可用。</span><br><span class="line">LoadBalancer</span><br><span class="line">在云环境中（需要云供应商可以支持）创建一个集群外部的负载均衡器，并为使用该负载均衡器的 IP 地址作为服务的访问地址。此时 ClusterIP 和 NodePort 的访问方式仍然可用。</span><br></pre></td></tr></table></figure>
+<h4 id="服务和标签"><a href="#服务和标签" class="headerlink" title="服务和标签"></a>服务和标签</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TIP</span><br><span class="line">Service是一个抽象层，它通过 LabelSelector 选择了一组 Pod（容器组），把这些 Pod 的指定端口公布到到集群外部，并支持负载均衡和服务发现。</span><br><span class="line">公布 Pod 的端口以使其可访问</span><br><span class="line">在多个 Pod 间实现负载均衡</span><br><span class="line">使用 Label 和 LabelSelector</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Service 将外部请求路由到一组 Pod 中，它提供了一个抽象层，使得 Kubernetes 可以在不影响服务调用者的情况下，动态调度容器组（在容器组失效后重新创建容器组，增加或者减少同一个 Deployment 对应容器组的数量等）。</span><br><span class="line">Service使用 Labels、LabelSelector(标签和选择器) (opens new window)匹配一组 Pod。Labels（标签）是附加到 Kubernetes 对象的键/值对，其用途有多种：</span><br><span class="line">将 Kubernetes 对象（Node、Deployment、Pod、Service等）指派用于开发环境、测试环境或生产环境</span><br><span class="line">嵌入版本标签，使用标签区别不同应用软件版本</span><br><span class="line">使用标签对 Kubernetes 对象进行分类</span><br></pre></td></tr></table></figure>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="kubectl-get-nodes"><a href="#kubectl-get-nodes" class="headerlink" title="kubectl get nodes"></a>kubectl get nodes</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">检查节点状态</span><br><span class="line">kubectl get nodes</span><br><span class="line">NAME           STATUS                     ROLES    AGE    VERSION</span><br><span class="line">10.226.0.10    Ready                      &lt;none&gt;   196d   v1.28.3-tke.18</span><br><span class="line">10.226.0.15    Ready                      &lt;none&gt;   190d   v1.28.3-tke.18</span><br><span class="line">10.226.16.2    Ready                      &lt;none&gt;   190d   v1.28.3-tke.18</span><br><span class="line">10.226.16.4    Ready                      &lt;none&gt;   190d   v1.28.3-tke.18</span><br><span class="line">10.226.18.16   Ready                      &lt;none&gt;   58d    v1.28.3-tke.22</span><br><span class="line">10.226.18.3    Ready                      &lt;none&gt;   58d    v1.28.3-tke.22</span><br><span class="line">10.226.2.70    Ready,SchedulingDisabled   &lt;none&gt;   43d    v1.28.3-tke.22</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-config-view"><a href="#kubectl-config-view" class="headerlink" title="kubectl config view"></a>kubectl config view</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">检查 kubectl 使用的配置文件。默认路径是 ~/.kube/config。通过以下命令查看当前使用的配置</span><br><span class="line">kubectl config view</span><br><span class="line">apiVersion: v1</span><br><span class="line">clusters:</span><br><span class="line">- cluster:</span><br><span class="line">    certificate-authority-data: DATA+OMITTED</span><br><span class="line">    server: https://10.226.0.33</span><br><span class="line">  name: cls-ps6hub9f</span><br><span class="line">contexts:</span><br><span class="line">- context:</span><br><span class="line">    cluster: cls-ps6hub9f</span><br><span class="line">    user: &quot;100038521123&quot;</span><br><span class="line">  name: cls-ps6hub9f-100038521123-context-default</span><br><span class="line">- context:</span><br><span class="line">    cluster: cls-ps6hub9f</span><br><span class="line">    namespace: dagster-app-test</span><br><span class="line">    user: &quot;100038521123&quot;</span><br><span class="line">  name: dagster-app-context</span><br><span class="line">current-context: dagster-app-context</span><br><span class="line">kind: Config</span><br><span class="line">preferences: &#123;&#125;</span><br><span class="line">users:</span><br><span class="line">- name: &quot;100038521123&quot;</span><br><span class="line">  user:</span><br><span class="line">    client-certificate-data: DATA+OMITTED</span><br><span class="line">    client-key-data: DATA+OMITTED</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-get-svc-n-namespace"><a href="#kubectl-get-svc-n-namespace" class="headerlink" title="kubectl get svc -n namespace"></a>kubectl get svc -n namespace</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 查看所有 Service</span><br><span class="line">~ kubectl get svc dagster-dagster-webserver -n dagster-app-test</span><br><span class="line">dagster-dagster-webserver   ClusterIP   192.168.92.189   &lt;none&gt;        80/TCP    78d</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-get-svc-xxxx-n-namespace-o-yaml"><a href="#kubectl-get-svc-xxxx-n-namespace-o-yaml" class="headerlink" title="kubectl get svc xxxx -n namespace -o yaml"></a>kubectl get svc xxxx -n namespace -o yaml</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">执行以下命令，查看 Service 的具体端口配置</span><br><span class="line">~ kubectl get svc dagster-dagster-webserver -n dagster-app-test -o yaml</span><br><span class="line">apiVersion: v1</span><br><span class="line">kind: Service</span><br><span class="line">metadata:</span><br><span class="line">  annotations:</span><br><span class="line">    meta.helm.sh/release-name: dagster</span><br><span class="line">    meta.helm.sh/release-namespace: dagster-app-test</span><br><span class="line">    service.cloud.tencent.com/sync-begin-time: &quot;2025-12-23T11:12:33+08:00&quot;</span><br><span class="line">    service.cloud.tencent.com/sync-end-time: &quot;2025-12-23T11:12:33+08:00&quot;</span><br><span class="line">  creationTimestamp: &quot;2025-12-23T03:12:33Z&quot;</span><br><span class="line">  labels:</span><br><span class="line">    app.kubernetes.io/instance: dagster</span><br><span class="line">    app.kubernetes.io/managed-by: Helm</span><br><span class="line">    app.kubernetes.io/name: dagster</span><br><span class="line">    app.kubernetes.io/version: dev</span><br><span class="line">    component: dagster-webserver</span><br><span class="line">    helm.sh/chart: dagster-0.0.1-dev-git</span><br><span class="line">  name: dagster-dagster-webserver</span><br><span class="line">  namespace: dagster-app-test</span><br><span class="line">  resourceVersion: &quot;12770797908&quot;</span><br><span class="line">  uid: 2e475843-19ba-40f3-88b5-31642d159049</span><br><span class="line">spec:</span><br><span class="line">  clusterIP: 192.168.92.189</span><br><span class="line">  clusterIPs:</span><br><span class="line">  - 192.168.92.189</span><br><span class="line">  internalTrafficPolicy: Cluster</span><br><span class="line">  ipFamilies:</span><br><span class="line">  - IPv4</span><br><span class="line">  ipFamilyPolicy: SingleStack</span><br><span class="line">  ports:</span><br><span class="line">  - name: http</span><br><span class="line">    port: 80</span><br><span class="line">    protocol: TCP</span><br><span class="line">    targetPort: 80</span><br><span class="line">  selector:</span><br><span class="line">    app.kubernetes.io/instance: dagster</span><br><span class="line">    app.kubernetes.io/name: dagster</span><br><span class="line">    component: dagster-webserver</span><br><span class="line">  sessionAffinity: None</span><br><span class="line">  type: ClusterIP</span><br><span class="line">status:</span><br><span class="line">  conditions:</span><br><span class="line">  - lastTransitionTime: &quot;2025-12-23T03:12:33Z&quot;</span><br><span class="line">    message: &quot;&quot;</span><br><span class="line">    reason: Success</span><br><span class="line">    status: &quot;True&quot;</span><br><span class="line">    type: Ready</span><br><span class="line">  loadBalancer: &#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">查询 Service 入口（推荐）</span><br><span class="line">Dagster 部署时通常会创建一个 Service 来对外暴露服务。你需要找到这个 Service 的访问地址：</span><br><span class="line"># 查看所有 Service</span><br><span class="line">kubectl get svc -n &lt;namespace&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="kubectl-get-svc-xxxx-n-namespace-o-wide"><a href="#kubectl-get-svc-xxxx-n-namespace-o-wide" class="headerlink" title="kubectl get svc xxxx -n namespace -o wide"></a>kubectl get svc xxxx -n namespace -o wide</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 查看 Service 详情（找到 External-IP 或 ClusterIP）</span><br><span class="line">kubectl get svc dagster-webserver -n &lt;namespace&gt; -o wide</span><br><span class="line">~ kubectl get svc dagster-dagster-webserver -n dagster-app -o wide</span><br><span class="line">NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE   SELECTOR</span><br><span class="line">dagster-dagster-webserver   ClusterIP   192.168.79.21   &lt;none&gt;        80/TCP    33d   app.kubernetes.io/instance=dagster,app.kubernetes.io/name=dagster,component=dagster-webserver</span><br><span class="line">Service 可能有几种类型：</span><br><span class="line">Service 类型	访问方式	适用场景</span><br><span class="line">LoadBalancer	有公网 IP（External-IP）	公网访问</span><br><span class="line">ClusterIP	集群内 IP（10.x.x.x）	仅集群内访问</span><br><span class="line">NodePort	节点 IP + 端口	通过节点 IP 访问</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">智汇君</div><div class="post-copyright__author_desc">路漫漫其修远兮，吾将上下而求索！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2025/01/17/kubernetes%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2025/01/17/kubernetes学习记录/')">kubernetes学习记录</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2025/01/17/kubernetes%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Tech智汇站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/17/%E6%8A%95%E8%B5%84%20%E8%AE%B8%E6%88%88%E8%B4%A2%E7%BB%8Fpro1/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">投资 许戈财经pro</div></div></a></div><div class="next-post pull-right"><a href="/2025/01/17/%E6%8A%95%E8%B5%84%20%E7%8B%97%E6%80%BB/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">投资 狗总</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about"><h1 class="author-info__name">智汇君</h1><div class="author-info__desc">路漫漫其修远兮，吾将上下而求索！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="/contact/" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来看我的博客鸭~</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(/img/博客微信公众号图片.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#kubernetes%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">kubernetes学习记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#kubernetes"><span class="toc-number">1.1.</span> <span class="toc-text">kubernetes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#deployment"><span class="toc-number">1.1.1.</span> <span class="toc-text">deployment</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">kubectl</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kuboard"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">kuboard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#heml"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">heml</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pods"><span class="toc-number">1.1.2.</span> <span class="toc-text">pods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-get"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">kubectl get</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">名称空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-describe"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">kubectl describe</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-logs"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">kubectl logs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-exec"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">kubectl exec</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kubernetes-Service%EF%BC%88%E6%9C%8D%E5%8A%A1%EF%BC%89"><span class="toc-number">1.1.3.</span> <span class="toc-text">Kubernetes Service（服务）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">服务和标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-number">1.1.4.</span> <span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-get-nodes"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">kubectl get nodes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-config-view"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">kubectl config view</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-get-svc-n-namespace"><span class="toc-number">1.1.4.3.</span> <span class="toc-text">kubectl get svc -n namespace</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-get-svc-xxxx-n-namespace-o-yaml"><span class="toc-number">1.1.4.4.</span> <span class="toc-text">kubectl get svc xxxx -n namespace -o yaml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kubectl-get-svc-xxxx-n-namespace-o-wide"><span class="toc-number">1.1.4.5.</span> <span class="toc-text">kubectl get svc xxxx -n namespace -o wide</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/12/07/docker%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="docker学习记录"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker学习记录"/></a><div class="content"><a class="title" href="/2025/12/07/docker%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="docker学习记录">docker学习记录</a><time datetime="2025-12-07T13:30:14.000Z" title="发表于 2025-12-07 21:30:14">2025-12-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/09/Spring/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/09/09/Spring/" title="无题">无题</a><time datetime="2025-09-09T13:29:04.741Z" title="发表于 2025-09-09 21:29:04">2025-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/20/C%E8%AF%AD%E8%A8%80%E5%92%8CC++%E8%AF%AD%E8%A8%80/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/08/20/C%E8%AF%AD%E8%A8%80%E5%92%8CC++%E8%AF%AD%E8%A8%80/" title="无题">无题</a><time datetime="2025-08-20T13:41:38.357Z" title="发表于 2025-08-20 21:41:38">2025-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/14/python%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95%E7%A7%AF%E7%B4%AF/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/07/14/python%E5%B8%B8%E7%94%A8%E7%94%A8%E6%B3%95%E7%A7%AF%E7%B4%AF/" title="无题">无题</a><time datetime="2025-07-14T08:25:16.017Z" title="发表于 2025-07-14 16:25:16">2025-07-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/%E9%9D%A2%E8%AF%95%20Hbase/" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/07/11/%E9%9D%A2%E8%AF%95%20Hbase/" title="无题">无题</a><time datetime="2025-07-11T09:24:44.656Z" title="发表于 2025-07-11 17:24:44">2025-07-11</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2026 By <a class="footer-bar-link" href="/" title="智汇君" target="_blank">智汇君</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">109</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">39</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://video-b2g.pages.dev/" title="视频解析"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/视频.png" alt="视频解析"/><span class="back-menu-item-text">视频解析</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://md5-uir.pages.dev/" title="md5值解密"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/MD5.png" alt="md5值解密"/><span class="back-menu-item-text">md5值解密</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://screencheck.pages.dev/#welcome" title="屏幕坏点检查"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/屏幕外观.png" alt="屏幕坏点检查"/><span class="back-menu-item-text">屏幕坏点检查</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://htmleditor-9lo.pages.dev/" title="在线html编辑器"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/html编辑器.png" alt="在线html编辑器"/><span class="back-menu-item-text">在线html编辑器</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">博客</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ttyong-github-io.pages.dev/" title="旧博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/博客.png" alt="旧博客"/><span class="back-menu-item-text">旧博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Git/" style="font-size: 0.88rem;">Git<sup>1</sup></a><a href="/tags/GitHub/" style="font-size: 0.88rem;">GitHub<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/NodeJs/" style="font-size: 0.88rem;">NodeJs<sup>1</sup></a><a href="/tags/git/" style="font-size: 0.88rem;">git<sup>3</sup></a><a href="/tags/github/" style="font-size: 0.88rem;">github<sup>1</sup></a><a href="/tags/idea/" style="font-size: 0.88rem;">idea<sup>1</sup></a><a href="/tags/%E5%85%AC%E8%80%83%E6%9D%A8%E8%80%81%E5%B8%88/" style="font-size: 0.88rem;">公考杨老师<sup>10</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 0.88rem;">博客<sup>1</sup></a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 0.88rem;">大数据<sup>31</sup></a><a href="/tags/%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98/" style="font-size: 0.88rem;">安知鱼主题<sup>1</sup></a><a href="/tags/%E5%BB%96%E9%9B%AA%E5%B3%B0/" style="font-size: 0.88rem;">廖雪峰<sup>14</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem;">笔记<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">计算机网络<sup>1</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 0.88rem;">面试<sup>9</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("24/12/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 智汇君 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("24/12/2024 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async src="https://at.alicdn.com/t/c/font_4792307_02gxbpyxcpwp.js?spm=a313x.manage_type_myprojects.i1.10.56323a81KZGFDE&amp;file=font_4792307_02gxbpyxcpwp.js# 阿里图标symbol 引用链接，主题会进行加载 symbol 引用"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
