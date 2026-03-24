@@ -60,7 +60,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2026-03-21 22:27:12',
+  postUpdate: '2026-03-24 23:12:26',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -242,8 +242,6 @@ if (true) {
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from io import StringIO,BytesIO</span><br><span class="line">data = data = &quot;&quot;&quot;</span><br><span class="line">CD701_LS6C3G0Y2RA400869_2025-09-14_20-39-34 Wet_road 1757853574346 1757853632426</span><br><span class="line">CD701_LS6C3G0Y6RA401183_2025-09-17_08-06-56 ------------ ------------- --------- -----------</span><br><span class="line">CD701_LS6C3G0Y2RA400922_2025-09-13_11-53-24 ------------ ------------- --------- -----------</span><br><span class="line">CD701_LS6C3G0Y9RA401081_2025-09-30_02-10-59 Wet_road 1759169460779 1759169512559</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">df = pd.read_csv(StringIO(data), sep=&#x27;\s+&#x27;, header=None)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bdata = skdata_dataengine.data_read(&quot;project-data-1329117257/spatiotemporal_data_application_datasets_auto/sub_dataset/lable/标签可视化分类.xlsx&quot;)</span><br><span class="line">excel_file = io.BytesIO(bdata)</span><br><span class="line">df = pd.read_excel(excel_file, sheet_name=1, header=None)</span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>list[n,m] 左闭右开<br>json.loads(str)[“data”] </p>
 <h4 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[i for i in x if i xxx] </span><br><span class="line"></span><br><span class="line"># sum(1 for r in results if r[&quot;success&quot;])</span><br></pre></td></tr></table></figure>
