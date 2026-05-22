@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>python开发-网络编程 | Tech智汇站</title><meta name="author" content="智汇君"><meta name="copyright" content="智汇君"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="python开发-网络编程"><meta name="application-name" content="python开发-网络编程"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="python开发-网络编程"><meta property="og:url" content="http://example.com/2025/01/17/开发 python开发-网络编程/index.html"><meta property="og:site_name" content="Tech智汇站"><meta property="og:description" content="开发 python开发-网络编程$fileName IP地址定位唯一设备 ipv4：点分十进制 ipv6：冒号十六进制 本地环回地址：127.0.0.1对应域名localhost ping 公网ip ping 局域网ip：能ping说明在一个局域网或者网段内 ping localhost：能ping"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://example.com/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg"><meta property="article:author" content="智汇君"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://example.com/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg"><meta name="description" content="开发 python开发-网络编程$fileName IP地址定位唯一设备 ipv4：点分十进制 ipv6：冒号十六进制 本地环回地址：127.0.0.1对应域名localhost ping 公网ip ping 局域网ip：能ping说明在一个局域网或者网段内 ping localhost：能ping"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2025/01/17/%E5%BC%80%E5%8F%91%20python%E5%BC%80%E5%8F%91-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css#fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":270},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 智汇君","link":"链接: ","source":"来源: Tech智汇站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Tech智汇站',
+  title: 'python开发-网络编程',
+  postAI: '',
+  pageFillDescription: '开发 python开发-网络编程, IP地址, 端口, TCP, socket, TCP网络应用程序, tcp客户端程序开发, socket类, tcp客户端, tcp服务端程序开发, socket类, tcp服务端, 端口号复用, TCP网络应用程序的注意点, tcp服务端服务多个客户端, 最终程序, socket之send和recv的原理剖析, 认识TCP socket的发送和接收缓冲区, send原理剖析, recv原理剖析, send和recv原理剖析开发开发网络编程地址定位唯一设备点分十进制冒号十六进制本地环回地址对应域名公网局域网能说明在一个局域网或者网段内能说明本地物理网卡没有问题端口通信通过找到对应设备再通过端口号找到对应进程应用程序确定数据是给哪个进程的共个知名端口号固定分配给特定服务服务简单邮件传输协议服务服务服务服务动态端口号一般程序员开发应用程序使用端口号称为动态端口号范围是从到如果程序员开发的程序没有设置端口号操作系统会在动态端口号这个范围内随机生成一个给开发的应用程序使用当运行一个程序默认会有一个端口号当这个程序退出时所占用的这个端口号就会被释放传输数据之前先要确定传输的协议的英文全拼简称传输控制协议它是一种面向连接的可靠的基于字节流的传输层通信协议通信步骤创建连接传输数据关闭连接如文件下载上网等特点面向连接通信双方必须先建立好连接才能进行数据的传输数据传输完成后双方必须断开此连接以释放系统资源可靠传输采用发送应答机制超时重传错误校验如延迟导致接收顺序错误自动调整顺序流量控制和阻塞管理网卡缓存区对应用户数据报协议不建立连接不可靠不会管是否能够收到或者正确收到上课用的广播共屏和都是运输层的协议那么通信数据是如何完成传输的呢套接字进程通过网络与另一个机器上的进程通信数据传输需要只要跟网络相关的应用程序或者软件都使用到了如微信浏览器共屏软件等网络应用程序网络应用程序基于协议需要借助网络通信的程序网络应用程序开发分为客户端程序开发服务端程序开发主动发起建立连接请求的是客户端程序等待接受连接请求的是服务端程序网络程序通信的流程通过地址找到网络中的设备通过端口号找到对应进程的端口传输数据是还需要使用传输协议保证数据的可靠性完成进程之间网络数的传输客户端程序开发开发客户端程序开发步骤回顾创建客户端套接字对象和服务端套接字建立连接发送数据接收数据关闭客启端套接字类导入模块创建客户端对象参数说明表示地址类型分为和表示传输协议类型方法说明表示和服务端套接字建立连接是服务器地址是应用程序的端口号表示发送数据是二进制数据表示接收数据是每次接收数据的长度客户端创建客户端套接字对象表示表示协议和服务端套接字建立连接这里其实并没设置客户端端口会默认随机分配一个动态端口号发送数据到服务端网络调试助手端为编码为编码你好我是客户端小白需要使用二进制接收服务端数据表示每次接收的最大字节数对二进制数据进行解码接受的服务端数据为关闭客启端套接字服务端程序开发开发服务端程序开发步骤回顾创建服务端端套接字对象绑定端口号设置监听等待接受客户端的连接请求按收数据发送数据关闭套接字类导入模块创建服务端对象参数说明表示地址类型分为和表示传输协议类型方法说明表示绑定端口号是地址是端口号地址一般不指定表示本机的任何一个地址都可以有的机器有多个网卡不指定表示通过任一个都可以表示设置监听参数表示最大等待建立连接的个数目前是单任务一个客户端连接其它的全部排队等待表示等待接受客户端的连接请求表示发送数据是二进制数据表示接收数据是每次接收数据的长度服务端创建服务端套接字对象表示表示协议绑定端口号第一个参数表示地址一般不用指定表示本机的任何一个即可第二个参数表示端口号客户端这里不绑定端口因为没有意义没人主动连接设置监听表示最大等待建立速接的个数等待接受客户端的连接请求注意点每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字只负责等待接收客户端的连接请求收发消息不使用该套接字阻塞操作等待客户端连接返回元组套接字端口代码执行到此说明客户福和服务端建立造接或功来自阻塞对二进制数据进行解码变成字符串接受的客户端数据为发送数据问题正在处理关团服务与客户瑞套接字表示和客户端终止通信关闭服务端套接字表示服务端以后不再等待接受客户端的连接请求端口号复用当客户端和服务端建立连接后服务端程序退出后端口号不会立即释放需要等待大概分钟解决办法有两种更换服务端端口号极不推荐设置端口号复用推荐大家使用也就是说让服务端程序退出后端口号立即释放设置端口号复用的代码如下参数表示当前套接字参数设置端口号复用选项参数设置端口号复用选项对应的值创建服务端套接字对象表示表示协议设置端口号复用表示意思服务端程序退出端口号立即释放绑定端口号第一个参数表示地址一般不用指定表示本机的任何一个即可第二个参数表示端口号客户端这里不绑定端口因为没有意义没人主动连接设置监听表示最大等待建立速接的个数等待接受客户端的连接请求注意点每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字只负责等待接收客户端的连接请求收发消息不使用该套接字阻塞操作等待客户端连接返回元组套接字端口代码执行到此说明客户福和服务端建立造接或功来自阻塞对二进制数据进行解码变成字符串接受的客户端数据为发送数据问题正在处理关团服务与客户瑞套接字表示和客户端终止通信关闭服务端套接字表示服务端以后不再等待接受客户端的连接请求网络应用程序的注意点当客户端程序想要和服务端程序进行通信的时候必须要先建立连接客户端程序一般不需要绑定端口号因为客户端是主动发起建立连接的服务端程序必须绑定端口号否则客户端找不到这个服务端程序后的套接字是被动套接字只负责接收新的客户端的连接请求不能收发消息当客户端程序和服务端程序连接成功后服务器端程序会产生一个新的套接字收发客户端消息使用该套接字关闭返回的套接字意味着和这个客户端已经通信完毕关闭后的套接字意味着服务端的套接字关闭了会导致新的客户端不能连接服务端但是之前已经接成功的客户端还能正常通信当客户端的套接字调用后服务器端的会解阻塞返回的数据长度为服务端可以通过返回数据的长度来判断客户端是否已经下线反之服务端关闭套接字客户端的也会解阻塞返回的数据长度也为服务端服务多个客户端目前只能循环排队服务客户端创建服务端套接字对象表示表示协议设置端口号复用表示意思服务端程序退出端口号立即释放绑定端口号第一个参数表示地址一般不用指定表示本机的任何一个即可第二个参数表示端口号客户端这里不绑定端口因为没有意义没人主动连接设置监听表示最大等待建立速接的个数等待接受客户端的连接请求注意点每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字只负责等待接收客户端的连接请求收发消息不使用该套接字阻塞操作等待客户端连接返回元组套接字端口代码执行到此说明客户福和服务端建立造接或功来自阻塞对二进制数据进行解码变成字符串接受的客户端数据为发送数据问题正在处理关团服务与客户瑞套接字表示和客户端终止通信关闭服务端套接字表示服务端以后不再等待接受客户端的连接请求目前可以并行处理客户端连接但是服务客户端时不能多轮处理代码执行到此说明客户福和服务端建立造接或功来自阻塞对二进制数据进行解码变成字符串接受的客户端数据为发送数据问题正在处理关团服务与客户瑞套接字表示和客户端终止通信关闭服务端套接字表示服务端以后不再等待接受客户端的连接请求创建服务端套接字对象表示表示协议设置端口号复用表示意思服务端程序退出端口号立即释放绑定端口号第一个参数表示地址一般不用指定表示本机的任何一个即可第二个参数表示端口号客户端这里不绑定端口因为没有意义没人主动连接设置监听表示最大等待建立速接的个数等待接受客户端的连接请求注意点每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字只负责等待接收客户端的连接请求收发消息不使用该套接字阻塞操作等待客户端连接返回元组套接字端口最终程序代码执行到此说明客户福和服务端建立造接或功来自循环接受客户端消息阻塞下线了对二进制数据进行解码变成字符串接受的客户端数据为发送数据问题正在处理关团服务与客户瑞套接字表示和客户端终止通信关闭服务端套接字表示服务端以后不再等待接受客户端的连接请求创建服务端套接字对象表示表示协议设置端口号复用表示意思服务端程序退出端口号立即释放绑定端口号第一个参数表示地址一般不用指定表示本机的任何一个即可第二个参数表示端口号客户端这里不绑定端口因为没有意义没人主动连接设置监听表示最大等待建立速接的个数等待接受客户端的连接请求注意点每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字只负责等待接收客户端的连接请求收发消息不使用该套接字阻塞操作等待客户端连接返回元组套接字端口设置守护主线程主线程退出子线程直接销毁服务端需要一直运行这段代码可以不需要了之和的原理剖析认识的发送和接收缓冲区当创建一个对象的时候会有一个发送缓冲区和一个接收缓冲区这个发送和接收缓冲区指的就是内存中的一片空间原理剖析是不是直接把数据发给服务端不是要想发数据必须得通过网卡发送数据应用程序是无法直接通过网卡发送数据的它需要调用操作系统接口也就是说应用程序把发送的数据先写入到发送缓冲区内存中的一片空间再由操作系统控制网卡把发送缓冲区的数据发送给服务端网卡原理剖析是不是直接从客户端接收数据不是应用软件是无法直接通过网卡接收数据的它需要调用操作系统接口由操作系统通过网卡接收数据把接收的数据写入到接收缓冲区内存中的一片空间应用程序再从接收缓存区获取客户端发送的数据和原理剖析说明发送数据是发送到发送缓冲区接收数据是从接收缓冲区获取小结不管是还是都不是直接接收到对方的数据和发送数据到对方发送数据会写入到发送缓冲区接收数据是从接收缓冲区来读取发送数据和接收数据最终是由操作系统控制网卡来完成',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-05-22 14:41:11',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://video-b2g.pages.dev/" title="视频解析"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/视频.png" alt="视频解析"/><span class="back-menu-item-text">视频解析</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://md5-uir.pages.dev/" title="md5值解密"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/MD5.png" alt="md5值解密"/><span class="back-menu-item-text">md5值解密</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://screencheck.pages.dev/#welcome" title="屏幕坏点检查"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/屏幕外观.png" alt="屏幕坏点检查"/><span class="back-menu-item-text">屏幕坏点检查</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://htmleditor-9lo.pages.dev/" title="在线html编辑器"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/html编辑器.png" alt="在线html编辑器"/><span class="back-menu-item-text">在线html编辑器</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">博客</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ttyong-github-io.pages.dev/" title="旧博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/博客.png" alt="旧博客"/><span class="back-menu-item-text">旧博客</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Tech智汇站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">52</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/python/" itemprop="url">python</a></span></div></div><h1 class="post-title" itemprop="name headline">python开发-网络编程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="post-meta-icon anzhiyufont anzhiyu-icon-calendar-days"></i><span class="post-meta-label">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-01-17T09:35:02.000Z" title="发表于 2025-01-17 17:35:02">2025-01-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为重庆"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>重庆</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2025/01/17/%E5%BC%80%E5%8F%91%20python%E5%BC%80%E5%8F%91-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"><header><a class="post-meta-categories" href="/categories/python/" itemprop="url">python</a><h1 id="CrawlerTitle" itemprop="name headline">python开发-网络编程</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">智汇君</span><time itemprop="dateCreated datePublished" datetime="2025-01-17T09:35:02.000Z" title="undefined 2025-01-17 17:35:02">2025-01-17</time></header><h1 id="开发-python开发-网络编程"><a href="#开发-python开发-网络编程" class="headerlink" title="开发 python开发-网络编程"></a>开发 python开发-网络编程</h1><p>$fileName</p>
+<h2 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h2><p>定位唯一设备</p>
+<p>ipv4：点分十进制</p>
+<p>ipv6：冒号十六进制</p>
+<p>本地环回地址：127.0.0.1对应域名localhost</p>
+<p>ping 公网ip</p>
+<p>ping 局域网ip：能ping说明在一个局域网或者网段内</p>
+<p>ping localhost：能ping说明本地物理网卡没有问题</p>
+<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>通信：通过ip找到对应设备，再通过端口号找到对应进程应用程序，确定数据是给哪个进程的</p>
+<p>共65536个</p>
+<p>知名端口号：0-1023固定分配给特定服务</p>
+<p>21：FTP服务</p>
+<p>25：SMTP(简单邮件传输协议)服务</p>
+<p>80：HTTP服务</p>
+<p>22：SSH服务</p>
+<p>443：HTTPS服务</p>
+<p>动态端口号：一般程序员开发应用程序使用端口号称为动态端口号，范围是从1024到65535。如果程序员开发的程序没有设置端口号，操作系统会在动态端口号这个范围内随机生成一个给开发的应用程序使用。<br>当运行一个程序默认会有一个端口号，当这个程序退出时，所占用的这个端口号就会被释放。</p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p>传输数据之前先要确定传输的协议</p>
+<p>TCP 的英文全拼(Transmission Control Protocol)简称传输控制协议，它是一种面向连接的、可靠的、基于字节流的传输层通信协议。</p>
+<p>TCP通信步骤:1.创建连接2.传输数据3.关闭连接</p>
+<p>如：文件下载、上网等</p>
+<p>TCP特点：</p>
+<p>1.面向连接<br>通信双方必须先建立好连接才能进行数据的传输，数据传输完成后，双方必须断开此连接，以释放系统资源。<br>2.可靠传输<br>TCP采用发送应答机制<br>超时重传<br>错误校验(如延迟导致接收顺序错误，自动调整顺序)<br>流量控制和阻塞管理(网卡缓存区)</p>
+<p>对应UDP(用户数据报协议)：不建立连接、不可靠、不会管是否能够收到或者正确收到(上课用的广播、共屏)</p>
+<p>TCP和UDP都是运输层的协议</p>
+<h2 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h2><p>那么通信数据是如何完成传输的呢?socket套接字</p>
+<p>进程通过网络与另一个机器上的进程通信、数据传输需要socket</p>
+<p>只要跟网络相关的应用程序或者软件都使用到了socket。如qq、微信、浏览器、共屏软件等。</p>
+<h2 id="TCP网络应用程序"><a href="#TCP网络应用程序" class="headerlink" title="TCP网络应用程序"></a>TCP网络应用程序</h2><p>TCP网络应用程序：基于TCP协议、需要借助网络通信的程序</p>
+<p>TCP网络应用程序开发分为:</p>
+<ul>
+<li><p>TCP客户端程序开发</p>
+</li>
+<li><p>TCP服务端程序开发</p>
+</li>
+</ul>
+<p>主动发起建立连接请求的是客户端程序</p>
+<p>等待接受连接请求的是服务端程序</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cloudflare-imgbed-bhx.pages.dev/file/1779293602733_d4fe-20260521-image-20260521001235238.png" alt="d4fe-20260521-image-20260521001235238.png"></p>
+<p>网络程序通信的流程:<br>1.通过ip地址找到网络中的设备<br>2.通过端口号找到对应进程的端口<br>3.传输数据是还需要使用传输协议(tcp)，保证数据的可靠性。</p>
+<p>4.s0cket完成进程之间网络数的传输</p>
+<h2 id="tcp客户端程序开发"><a href="#tcp客户端程序开发" class="headerlink" title="tcp客户端程序开发"></a>tcp客户端程序开发</h2><p>开发TCP客户端程序开发步骤回顾<br>1.创建客户端套接字对象<br>2.和服务端套接字建立连接<br>3.发送数据<br>4.接收数据<br>5.关闭客启端套接字</p>
+<h4 id="socket类"><a href="#socket类" class="headerlink" title="socket类"></a>socket类</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">导入socket模块</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">创建客户端socket对象</span><br><span class="line">socket.socket(AddressFamily, <span class="type">Type</span>)</span><br><span class="line"></span><br><span class="line">参数说明:</span><br><span class="line">AddressFamily表示IP地址类型，分为IPv4和IPv6</span><br><span class="line"><span class="type">Type</span>表示传输协议类型</span><br><span class="line"></span><br><span class="line">方法说明:</span><br><span class="line">connect(host,port)表示和服务端套接字建立连接</span><br><span class="line">host是服务器ip地址</span><br><span class="line">port是应用程序的端口号</span><br><span class="line"></span><br><span class="line">send(data)表示发送数据，data是二进制数据</span><br><span class="line">recv(buffersize)表示接收数据，buffersize是每次接收数据的长度</span><br></pre></td></tr></table></figure>
+
+<h4 id="tcp客户端"><a href="#tcp客户端" class="headerlink" title="tcp客户端"></a>tcp客户端</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> socket</span><br><span class="line">    <span class="comment"># 1.创建客户端套接字对象</span></span><br><span class="line">    <span class="comment"># socket.AF_INET表示ipv4，socket.SOCK_STREAM表示tcp协议</span></span><br><span class="line">    tcp_client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">    <span class="comment"># 2.和服务端套接字建立连接</span></span><br><span class="line">    tcp_client_socket.connect((<span class="string">&quot;192.168.31.9&quot;</span>,<span class="number">8080</span>)) <span class="comment"># 这里其实并没设置客户端端口，会默认随机分配一个动态端口号</span></span><br><span class="line">    <span class="comment"># 3.发送数据到服务端 </span></span><br><span class="line">    <span class="comment"># 网络调试助手，windows端为gbk编码，linux为utf-8编码</span></span><br><span class="line">    send_content = <span class="string">&quot;你好，我是tcp客户端小白!&quot;</span></span><br><span class="line">    send_data = send_content.encode(encoding=<span class="string">&quot;gbk&quot;</span>) <span class="comment"># 需要使用二进制</span></span><br><span class="line">    tcp_client_socket.send(send_data)</span><br><span class="line">    <span class="comment"># 4.接收服务端数据</span></span><br><span class="line">    <span class="comment"># 1024：表示每次接收的最大字节数</span></span><br><span class="line">    recv_data = tcp_client_socket.recv(<span class="number">1024</span>)</span><br><span class="line">    <span class="comment"># 对二进制数据进行解码</span></span><br><span class="line">    recv_content = recv_data.decode(encoding=<span class="string">&quot;gbk&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;接受的服务端数据为：&quot;</span>, recv_data)</span><br><span class="line">    <span class="comment"># 5.关闭客启端套接字</span></span><br><span class="line">    tcp_client_socket.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="tcp服务端程序开发"><a href="#tcp服务端程序开发" class="headerlink" title="tcp服务端程序开发"></a>tcp服务端程序开发</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">开发TCP服务端程序开发步骤回顾</span><br><span class="line"><span class="number">1.</span>创建服务端端套接字对象</span><br><span class="line"><span class="number">2.</span>绑定端口号</span><br><span class="line"><span class="number">3.</span>设置监听</span><br><span class="line"><span class="number">4.</span>等待接受客户端的连接请求</span><br><span class="line"><span class="number">5.</span>按收数据</span><br><span class="line"><span class="number">6.</span>发送数据</span><br><span class="line"><span class="number">7.</span>关闭套接字</span><br></pre></td></tr></table></figure>
+
+<h3 id="socket类-1"><a href="#socket类-1" class="headerlink" title="socket类"></a>socket类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">导入socket 模块</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">创建服务端socket对象</span><br><span class="line">socket.socket(AddressFamily, <span class="type">Type</span>)</span><br><span class="line">参数说明:</span><br><span class="line">AddressFamily表示IP地址类型，分为IPv4和IPv6</span><br><span class="line"><span class="type">Type</span>表示传输协议类型</span><br><span class="line"></span><br><span class="line">方法说明:</span><br><span class="line">bind(host,port))表示绑定端口号，host是ip地址</span><br><span class="line">port 是端口号,ip地址一般不指定,表示本机的任何一个ip地址都可以(有的机器有多个网卡，不指定ip表示通过任一个ip都可以)</span><br><span class="line">listen(backlog)表示设置监听，backlog参数表示最大等待建立连接的个数(目前是单任务，一个客户端连接，其它的全部排队等待)</span><br><span class="line">accept()表示等待接受客户端的连接请求</span><br><span class="line">send(data)表示发送数据，data是二进制数据</span><br><span class="line">recv(buffersize)表示接收数据，buffersize是每次接收数据的长度</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cloudflare-imgbed-bhx.pages.dev/file/1779369239514_a301-20260521-image-20260521211342931.png" alt="a301-20260521-image-20260521211342931.png"></p>
+<h3 id="tcp服务端"><a href="#tcp服务端" class="headerlink" title="tcp服务端"></a>tcp服务端</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> socket</span><br><span class="line">    <span class="comment"># 1.创建服务端套接字对象</span></span><br><span class="line">    <span class="comment"># socket.AF_INET表示ipv4，socket.SOCK_STREAM表示tcp协议</span></span><br><span class="line">    tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">    <span class="comment"># 2.绑定端口号</span></span><br><span class="line">    <span class="comment"># 第一个参数表示ip地址，一般不用指定，表示本机的任何一个ip即可</span></span><br><span class="line">    <span class="comment"># 第二个参数表示端口号</span></span><br><span class="line">    tcp_server_socket.bind((<span class="string">&quot;&quot;</span>,<span class="number">9090</span>)) <span class="comment"># 客户端这里不绑定端口，因为没有意义，没人主动连接</span></span><br><span class="line">    <span class="comment"># 3.设置监听</span></span><br><span class="line">    <span class="comment"># 128:表示最大等待建立速接的个数</span></span><br><span class="line">    tcp_server_socket.listen(<span class="number">128</span>)</span><br><span class="line">    <span class="comment"># 4.等待接受客户端的连接请求</span></span><br><span class="line">    <span class="comment"># 注意点:每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字</span></span><br><span class="line">    <span class="comment"># tcp_server_socket只负责等待接收客户端的连接请求，收发消息不使用该套接字</span></span><br><span class="line">    new_server_socket,ip_port = tcp_server_socket.accept() <span class="comment"># 阻塞操作，等待客户端连接，返回元组(套接字,(ip，端口))</span></span><br><span class="line">    <span class="comment"># 代码执行到此·说明客户福和服务端建立造接或功</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;来自：&quot;</span>,ip_port)</span><br><span class="line">    recv_data = new_server_socket.recv(<span class="number">1024</span>) <span class="comment"># 阻塞</span></span><br><span class="line">    <span class="comment"># 对二进制数据进行解码变成字符串</span></span><br><span class="line">    recv_content = recv_data.decode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;接受的客户端数据为：&quot;</span>, recv_content)</span><br><span class="line">    <span class="comment"># 6.发送数据</span></span><br><span class="line">    send_content = <span class="string">&quot;问题正在处理...&quot;</span></span><br><span class="line">    send_data = send_content.encode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    new_server_socket.send(send_data)</span><br><span class="line">    <span class="comment"># 关团服务与客户瑞套接字·表示和客户端终止通信</span></span><br><span class="line">    <span class="comment"># 7.关闭服务端套接字，表示服务端以后不再等待接受客户端的连接请求</span></span><br><span class="line">    new_server_socket.close() </span><br><span class="line">    tcp_server_socket.close()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="端口号复用"><a href="#端口号复用" class="headerlink" title="端口号复用"></a>端口号复用</h3><p>当客户端和服务端建立连接后，服务端程序退出后端口号不会立即释放，需要等待大概1-2分钟。</p>
+<p>解决办法有两种:<br>1.更换服务端端口号(极不推荐)<br>2.设置端口号复用(推荐大家使用)·也就是说让服务端程序退出后端口号立即释放</p>
+<p>设置端口号复用的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#参数1:表示当前套接字</span></span><br><span class="line"><span class="comment">#参数2:设置端口号复用选项</span></span><br><span class="line"><span class="comment">#参数3:设置端口号复用选项对应的值</span></span><br><span class="line">tcp_server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> socket</span><br><span class="line">    <span class="comment"># 1.创建服务端套接字对象</span></span><br><span class="line">    <span class="comment"># socket.AF_INET表示ipv4，socket.SOCK_STREAM表示tcp协议</span></span><br><span class="line">    tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">    <span class="comment"># 设置端口号复用，表示意思：服务端程序退出端口号立即释放</span></span><br><span class="line">    tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 2.绑定端口号</span></span><br><span class="line">    <span class="comment"># 第一个参数表示ip地址，一般不用指定，表示本机的任何一个ip即可</span></span><br><span class="line">    <span class="comment"># 第二个参数表示端口号</span></span><br><span class="line">    tcp_server_socket.bind((<span class="string">&quot;&quot;</span>,<span class="number">9090</span>)) <span class="comment"># 客户端这里不绑定端口，因为没有意义，没人主动连接</span></span><br><span class="line">    <span class="comment"># 3.设置监听</span></span><br><span class="line">    <span class="comment"># 128:表示最大等待建立速接的个数</span></span><br><span class="line">    tcp_server_socket.listen(<span class="number">128</span>)</span><br><span class="line">    <span class="comment"># 4.等待接受客户端的连接请求</span></span><br><span class="line">    <span class="comment"># 注意点:每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字</span></span><br><span class="line">    <span class="comment"># tcp_server_socket只负责等待接收客户端的连接请求，收发消息不使用该套接字</span></span><br><span class="line">    new_server_socket,ip_port = tcp_server_socket.accept() <span class="comment"># 阻塞操作，等待客户端连接，返回元组(套接字,(ip，端口))</span></span><br><span class="line">    <span class="comment"># 代码执行到此·说明客户福和服务端建立造接或功</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;来自：&quot;</span>,ip_port)</span><br><span class="line">    recv_data = new_server_socket.recv(<span class="number">1024</span>) <span class="comment"># 阻塞</span></span><br><span class="line">    <span class="comment"># 对二进制数据进行解码变成字符串</span></span><br><span class="line">    recv_content = recv_data.decode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;接受的客户端数据为：&quot;</span>, recv_content)</span><br><span class="line">    <span class="comment"># 6.发送数据</span></span><br><span class="line">    send_content = <span class="string">&quot;问题正在处理...&quot;</span></span><br><span class="line">    send_data = send_content.encode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    new_server_socket.send(send_data)</span><br><span class="line">    <span class="comment"># 关团服务与客户瑞套接字·表示和客户端终止通信</span></span><br><span class="line">    <span class="comment"># 7.关闭服务端套接字，表示服务端以后不再等待接受客户端的连接请求</span></span><br><span class="line">    new_server_socket.close() </span><br><span class="line">    tcp_server_socket.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="TCP网络应用程序的注意点"><a href="#TCP网络应用程序的注意点" class="headerlink" title="TCP网络应用程序的注意点"></a>TCP网络应用程序的注意点</h2><p>1.当TCP客户端程序想要和TCP服务端程序进行通信的时候必须要先建立连接</p>
+<p>2.TCP客户端程序一般不需要绑定端口号，因为客户端是主动发起建立连接的</p>
+<p>3.TCP服务端程序必须绑定端口号，否则客户端找不到这个TCP服务端程序。</p>
+<p>4.listen后的套接字是被动套接字，只负责接收新的客户端的连接请求，不能收发消息。</p>
+<p>5.当TCP客户端程序和TCP服务端程序连接成功后TCP服务器端程序会产生一个新的套接字，收发客户端消息使用该套接字。<br>6.关闭accept返回的套接字意味着和这个客户端已经通信完毕。</p>
+<p>7.关闭listen后的套接字意味着服务端的套接字关闭了，会导致新的客户端不能连接服务端，但是之前已经接成功的客户端还能正常通信<br>8.当客户端的套接字调用close后，服务器端的recv 会解阻塞，返回的数据长度为0，服务端可以通过返回数据的长度来判断客户端是否已经下线，反之服务端关闭套接字，客户端的recv 也会解阻塞，返回的数据长度也为0</p>
+<h2 id="tcp服务端服务多个客户端"><a href="#tcp服务端服务多个客户端" class="headerlink" title="tcp服务端服务多个客户端"></a>tcp服务端服务多个客户端</h2><p>目前只能循环排队服务客户端</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> socket</span><br><span class="line">    <span class="comment"># 1.创建服务端套接字对象</span></span><br><span class="line">    <span class="comment"># socket.AF_INET表示ipv4，socket.SOCK_STREAM表示tcp协议</span></span><br><span class="line">    tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">    <span class="comment"># 设置端口号复用，表示意思：服务端程序退出端口号立即释放</span></span><br><span class="line">    tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 2.绑定端口号</span></span><br><span class="line">    <span class="comment"># 第一个参数表示ip地址，一般不用指定，表示本机的任何一个ip即可</span></span><br><span class="line">    <span class="comment"># 第二个参数表示端口号</span></span><br><span class="line">    tcp_server_socket.bind((<span class="string">&quot;&quot;</span>,<span class="number">9090</span>)) <span class="comment"># 客户端这里不绑定端口，因为没有意义，没人主动连接</span></span><br><span class="line">    <span class="comment"># 3.设置监听</span></span><br><span class="line">    <span class="comment"># 128:表示最大等待建立速接的个数</span></span><br><span class="line">    tcp_server_socket.listen(<span class="number">128</span>)</span><br><span class="line">    <span class="comment"># 4.等待接受客户端的连接请求</span></span><br><span class="line">    <span class="comment"># 注意点:每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字</span></span><br><span class="line">    <span class="comment"># tcp_server_socket只负责等待接收客户端的连接请求，收发消息不使用该套接字</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        new_server_socket,ip_port = tcp_server_socket.accept() <span class="comment"># 阻塞操作，等待客户端连接，返回元组(套接字,(ip，端口))</span></span><br><span class="line">        <span class="comment"># 代码执行到此·说明客户福和服务端建立造接或功</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;来自：&quot;</span>,ip_port)</span><br><span class="line">        recv_data = new_server_socket.recv(<span class="number">1024</span>) <span class="comment"># 阻塞</span></span><br><span class="line">        <span class="comment"># 对二进制数据进行解码变成字符串</span></span><br><span class="line">        recv_content = recv_data.decode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;接受的客户端数据为：&quot;</span>, recv_content)</span><br><span class="line">        <span class="comment"># 6.发送数据</span></span><br><span class="line">        send_content = <span class="string">&quot;问题正在处理...&quot;</span></span><br><span class="line">        send_data = send_content.encode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">        new_server_socket.send(send_data)</span><br><span class="line">        <span class="comment"># 关团服务与客户瑞套接字·表示和客户端终止通信</span></span><br><span class="line">        <span class="comment"># 7.关闭服务端套接字，表示服务端以后不再等待接受客户端的连接请求</span></span><br><span class="line">        new_server_socket.close() </span><br><span class="line">    tcp_server_socket.close()</span><br></pre></td></tr></table></figure>
+
+<p>目前可以并行处理客户端连接，但是服务客户端时不能多轮处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">new_server_socket,ip_port</span>):</span><br><span class="line">    <span class="comment"># 代码执行到此·说明客户福和服务端建立造接或功</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;来自：&quot;</span>,ip_port)</span><br><span class="line">    recv_data = new_server_socket.recv(<span class="number">1024</span>) <span class="comment"># 阻塞</span></span><br><span class="line">    <span class="comment"># 对二进制数据进行解码变成字符串</span></span><br><span class="line">    recv_content = recv_data.decode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;接受的客户端数据为：&quot;</span>, recv_content)</span><br><span class="line">    <span class="comment"># 6.发送数据</span></span><br><span class="line">    send_content = <span class="string">&quot;问题正在处理...&quot;</span></span><br><span class="line">    send_data = send_content.encode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    new_server_socket.send(send_data)</span><br><span class="line">    <span class="comment"># 关团服务与客户瑞套接字·表示和客户端终止通信</span></span><br><span class="line">    <span class="comment"># 7.关闭服务端套接字，表示服务端以后不再等待接受客户端的连接请求</span></span><br><span class="line">    new_server_socket.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> socket</span><br><span class="line">    <span class="comment"># 1.创建服务端套接字对象</span></span><br><span class="line">    <span class="comment"># socket.AF_INET表示ipv4，socket.SOCK_STREAM表示tcp协议</span></span><br><span class="line">    tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">    <span class="comment"># 设置端口号复用，表示意思：服务端程序退出端口号立即释放</span></span><br><span class="line">    tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 2.绑定端口号</span></span><br><span class="line">    <span class="comment"># 第一个参数表示ip地址，一般不用指定，表示本机的任何一个ip即可</span></span><br><span class="line">    <span class="comment"># 第二个参数表示端口号</span></span><br><span class="line">    tcp_server_socket.bind((<span class="string">&quot;&quot;</span>,<span class="number">9090</span>)) <span class="comment"># 客户端这里不绑定端口，因为没有意义，没人主动连接</span></span><br><span class="line">    <span class="comment"># 3.设置监听</span></span><br><span class="line">    <span class="comment"># 128:表示最大等待建立速接的个数</span></span><br><span class="line">    tcp_server_socket.listen(<span class="number">128</span>)</span><br><span class="line">    <span class="comment"># 4.等待接受客户端的连接请求</span></span><br><span class="line">    <span class="comment"># 注意点:每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字</span></span><br><span class="line">    <span class="comment"># tcp_server_socket只负责等待接收客户端的连接请求，收发消息不使用该套接字</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        new_server_socket,ip_port = tcp_server_socket.accept() <span class="comment"># 阻塞操作，等待客户端连接，返回元组(套接字,(ip，端口))</span></span><br><span class="line">        args = &#123;<span class="string">&quot;new_server_socket&quot;</span>:new_server_socket,<span class="string">&quot;ip_port&quot;</span>:ip_port&#125;</span><br><span class="line">        t = threading.Thread(target=process,kwargs=args)</span><br><span class="line">        t.daemon = <span class="literal">True</span></span><br><span class="line">        t.start()</span><br><span class="line">         </span><br><span class="line">    tcp_server_socket.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="最终程序"><a href="#最终程序" class="headerlink" title="最终程序"></a>最终程序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process</span>(<span class="params">new_server_socket,ip_port</span>):</span><br><span class="line">    <span class="comment"># 代码执行到此·说明客户福和服务端建立造接或功</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;来自：&quot;</span>,ip_port)</span><br><span class="line">    <span class="comment"># 循环接受客户端消息</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        recv_data = new_server_socket.recv(<span class="number">1024</span>) <span class="comment"># 阻塞</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(recv_data) == <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip_port,<span class="string">&quot;下线了！&quot;</span>)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="comment"># 对二进制数据进行解码变成字符串</span></span><br><span class="line">        recv_content = recv_data.decode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;接受的客户端数据为：&quot;</span>, recv_content)</span><br><span class="line">        <span class="comment"># 6.发送数据</span></span><br><span class="line">        send_content = <span class="string">&quot;问题正在处理...&quot;</span></span><br><span class="line">        send_data = send_content.encode(encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">        new_server_socket.send(send_data)</span><br><span class="line">    <span class="comment"># 关团服务与客户瑞套接字·表示和客户端终止通信</span></span><br><span class="line">    <span class="comment"># 7.关闭服务端套接字，表示服务端以后不再等待接受客户端的连接请求</span></span><br><span class="line">    new_server_socket.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> socket</span><br><span class="line">    <span class="comment"># 1.创建服务端套接字对象</span></span><br><span class="line">    <span class="comment"># socket.AF_INET表示ipv4，socket.SOCK_STREAM表示tcp协议</span></span><br><span class="line">    tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">    <span class="comment"># 设置端口号复用，表示意思：服务端程序退出端口号立即释放</span></span><br><span class="line">    tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 2.绑定端口号</span></span><br><span class="line">    <span class="comment"># 第一个参数表示ip地址，一般不用指定，表示本机的任何一个ip即可</span></span><br><span class="line">    <span class="comment"># 第二个参数表示端口号</span></span><br><span class="line">    tcp_server_socket.bind((<span class="string">&quot;&quot;</span>,<span class="number">9090</span>)) <span class="comment"># 客户端这里不绑定端口，因为没有意义，没人主动连接</span></span><br><span class="line">    <span class="comment"># 3.设置监听</span></span><br><span class="line">    <span class="comment"># 128:表示最大等待建立速接的个数</span></span><br><span class="line">    tcp_server_socket.listen(<span class="number">128</span>)</span><br><span class="line">    <span class="comment"># 4.等待接受客户端的连接请求</span></span><br><span class="line">    <span class="comment"># 注意点:每次当客户瑞和服务搞建立连接成功职会返回一个新的套接字</span></span><br><span class="line">    <span class="comment"># tcp_server_socket只负责等待接收客户端的连接请求，收发消息不使用该套接字</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        new_server_socket,ip_port = tcp_server_socket.accept() <span class="comment"># 阻塞操作，等待客户端连接，返回元组(套接字,(ip，端口))</span></span><br><span class="line">        args = &#123;<span class="string">&quot;new_server_socket&quot;</span>:new_server_socket,<span class="string">&quot;ip_port&quot;</span>:ip_port&#125;</span><br><span class="line">        t = threading.Thread(target=process,kwargs=args)</span><br><span class="line">        <span class="comment"># 设置守护主线程，主线程退出子线程直接销毁 t.setDaemon(True)</span></span><br><span class="line">        t.daemon = <span class="literal">True</span></span><br><span class="line">        t.start()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 服务端需要一直运行，这段代码可以不需要了     </span></span><br><span class="line">    tcp_server_socket.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="socket之send和recv的原理剖析"><a href="#socket之send和recv的原理剖析" class="headerlink" title="socket之send和recv的原理剖析"></a>socket之send和recv的原理剖析</h2><h3 id="认识TCP-socket的发送和接收缓冲区"><a href="#认识TCP-socket的发送和接收缓冲区" class="headerlink" title="认识TCP socket的发送和接收缓冲区"></a>认识TCP socket的发送和接收缓冲区</h3><p>当创建一个TCP socket对象的时候会有一个发送缓冲区和一个接收缓冲区，这个发送和接收缓冲区指的就是内存中的一片空间。</p>
+<h3 id="send原理剖析"><a href="#send原理剖析" class="headerlink" title="send原理剖析"></a>send原理剖析</h3><p>send是不是直接把数据发给服务端?<br>不是，要想发数据，必须得通过网卡发送数据，应用程序是无法直接通过网卡发送数据的。它需要调用操作系统接口。也就是说，应用程序把发送的数据先写入到发送缓冲区(内存中的一片空间)。再由操作系统控制网卡把发送缓冲区的数据发送给服务端网卡</p>
+<h3 id="recv原理剖析"><a href="#recv原理剖析" class="headerlink" title="recv原理剖析"></a>recv原理剖析</h3><p>recv是不是直接从客户端接收数据?<br>不是，应用软件是无法直接通过网卡接收数据的，它需要调用操作系统接口，由操作系统通过网卡接收数据，把接收的数据写入到接收缓冲区(内存中的一片空间)，应用程序再从接收缓存区获取客户端发送的数据</p>
+<h3 id="send和recv原理剖析"><a href="#send和recv原理剖析" class="headerlink" title="send和recv原理剖析"></a>send和recv原理剖析</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cloudflare-imgbed-bhx.pages.dev/file/1779428906593_e835-20260522-image-20260522134817535.png" alt="image-20260522134817535"></p>
+<p><strong>说明:</strong></p>
+<ul>
+<li>发送数据是发送到发送缓冲区</li>
+<li>接收数据是从接收缓冲区获取</li>
+</ul>
+<p><strong>小结</strong></p>
+<p>不管是recv还是send都不是直接接收到对方的数据和发送数据到对方，<strong>发送数据会写入到发送缓冲区，接收数据是从接收缓冲区来读取，发送数据和接收数据最终是由操作系统控制网卡来完成。</strong></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">智汇君</div><div class="post-copyright__author_desc">路漫漫其修远兮，吾将上下而求索！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2025/01/17/%E5%BC%80%E5%8F%91%20python%E5%BC%80%E5%8F%91-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2025/01/17/开发 python开发-网络编程/')">python开发-网络编程</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2025/01/17/%E5%BC%80%E5%8F%91%20python%E5%BC%80%E5%8F%91-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Tech智汇站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/17/%E5%BC%80%E5%8F%91%20python%E5%BC%80%E5%8F%91-%E5%A4%9A%E4%BB%BB%E5%8A%A1/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">python开发-多任务</div></div></a></div><div class="next-post pull-right"><a href="/2025/01/17/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%20Pandas%E5%88%B7%E9%A2%98/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Pandas刷题</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about"><h1 class="author-info__name">智汇君</h1><div class="author-info__desc">路漫漫其修远兮，吾将上下而求索！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="/contact/" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来看我的博客鸭~</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(/img/博客微信公众号图片.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%8F%91-python%E5%BC%80%E5%8F%91-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">开发 python开发-网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP%E5%9C%B0%E5%9D%80"><span class="toc-number">1.1.</span> <span class="toc-text">IP地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3"><span class="toc-number">1.2.</span> <span class="toc-text">端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP"><span class="toc-number">1.3.</span> <span class="toc-text">TCP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socket"><span class="toc-number">1.4.</span> <span class="toc-text">socket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.5.</span> <span class="toc-text">TCP网络应用程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tcp%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91"><span class="toc-number">1.6.</span> <span class="toc-text">tcp客户端程序开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#socket%E7%B1%BB"><span class="toc-number">1.6.0.1.</span> <span class="toc-text">socket类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tcp%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">1.6.0.2.</span> <span class="toc-text">tcp客户端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tcp%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91"><span class="toc-number">1.7.</span> <span class="toc-text">tcp服务端程序开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#socket%E7%B1%BB-1"><span class="toc-number">1.7.1.</span> <span class="toc-text">socket类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tcp%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.7.2.</span> <span class="toc-text">tcp服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3%E5%8F%B7%E5%A4%8D%E7%94%A8"><span class="toc-number">1.7.3.</span> <span class="toc-text">端口号复用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">1.8.</span> <span class="toc-text">TCP网络应用程序的注意点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tcp%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%A4%9A%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">1.9.</span> <span class="toc-text">tcp服务端服务多个客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.9.0.1.</span> <span class="toc-text">最终程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socket%E4%B9%8Bsend%E5%92%8Crecv%E7%9A%84%E5%8E%9F%E7%90%86%E5%89%96%E6%9E%90"><span class="toc-number">1.10.</span> <span class="toc-text">socket之send和recv的原理剖析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86TCP-socket%E7%9A%84%E5%8F%91%E9%80%81%E5%92%8C%E6%8E%A5%E6%94%B6%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">1.10.1.</span> <span class="toc-text">认识TCP socket的发送和接收缓冲区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#send%E5%8E%9F%E7%90%86%E5%89%96%E6%9E%90"><span class="toc-number">1.10.2.</span> <span class="toc-text">send原理剖析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#recv%E5%8E%9F%E7%90%86%E5%89%96%E6%9E%90"><span class="toc-number">1.10.3.</span> <span class="toc-text">recv原理剖析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#send%E5%92%8Crecv%E5%8E%9F%E7%90%86%E5%89%96%E6%9E%90"><span class="toc-number">1.10.4.</span> <span class="toc-text">send和recv原理剖析</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/12/07/docker/" title="docker"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker"/></a><div class="content"><a class="title" href="/2025/12/07/docker/" title="docker">docker</a><time datetime="2025-12-07T13:30:14.000Z" title="发表于 2025-12-07 21:30:14">2025-12-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/17/dagster%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="dagster"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="dagster"/></a><div class="content"><a class="title" href="/2025/01/17/dagster%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="dagster">dagster</a><time datetime="2025-01-17T09:35:02.000Z" title="发表于 2025-01-17 17:35:02">2025-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/17/git/" title="git"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2025/01/17/git/" title="git">git</a><time datetime="2025-01-17T09:35:02.000Z" title="发表于 2025-01-17 17:35:02">2025-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/17/kubernetes-helm/" title="kubernetes-helm"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="kubernetes-helm"/></a><div class="content"><a class="title" href="/2025/01/17/kubernetes-helm/" title="kubernetes-helm">kubernetes-helm</a><time datetime="2025-01-17T09:35:02.000Z" title="发表于 2025-01-17 17:35:02">2025-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/17/kubernetes-kubectl/" title="kubernetes-kubectl"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/%E6%96%87%E7%AB%A0%E5%B0%81%E9%9D%A2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="kubernetes-kubectl"/></a><div class="content"><a class="title" href="/2025/01/17/kubernetes-kubectl/" title="kubernetes-kubectl">kubernetes-kubectl</a><time datetime="2025-01-17T09:35:02.000Z" title="发表于 2025-01-17 17:35:02">2025-01-17</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2026 By <a class="footer-bar-link" href="/" title="智汇君" target="_blank">智汇君</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">17</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://video-b2g.pages.dev/" title="视频解析"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/视频.png" alt="视频解析"/><span class="back-menu-item-text">视频解析</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://md5-uir.pages.dev/" title="md5值解密"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/MD5.png" alt="md5值解密"/><span class="back-menu-item-text">md5值解密</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://screencheck.pages.dev/#welcome" title="屏幕坏点检查"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/屏幕外观.png" alt="屏幕坏点检查"/><span class="back-menu-item-text">屏幕坏点检查</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://htmleditor-9lo.pages.dev/" title="在线html编辑器"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/html编辑器.png" alt="在线html编辑器"/><span class="back-menu-item-text">在线html编辑器</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">博客</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://ttyong-github-io.pages.dev/" title="旧博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/博客.png" alt="旧博客"/><span class="back-menu-item-text">旧博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/git/" style="font-size: 0.88rem;">git<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("24/12/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 智汇君 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("24/12/2024 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async src="https://at.alicdn.com/t/c/font_4792307_02gxbpyxcpwp.js?spm=a313x.manage_type_myprojects.i1.10.56323a81KZGFDE&amp;file=font_4792307_02gxbpyxcpwp.js# 阿里图标symbol 引用链接，主题会进行加载 symbol 引用"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
